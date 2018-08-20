@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public bool canAction = false;
     
-    //Ta bort denna och allt kukar ur---
+    //Value for implementing strafing---
     [HideInInspector]
     public bool isStrafing = false;
     //----------------------------------

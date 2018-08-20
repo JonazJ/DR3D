@@ -16,7 +16,6 @@ public class GameController : MonoBehaviour {
 
     //EndText
     public Text infoText;
-    private bool gameEnded;
 
     //TimeText
     public Text timerText;
@@ -38,7 +37,6 @@ public class GameController : MonoBehaviour {
     {
         Paused = true;
         Time.timeScale = 0f;
-        gameEnded = false;
         infoText.gameObject.SetActive(true);
         gateHigh.gameObject.SetActive(true);
         gateLow.gameObject.SetActive(true);
