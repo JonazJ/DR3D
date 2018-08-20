@@ -43,7 +43,7 @@ public class GameController : MonoBehaviour {
         startGameBtn.gameObject.SetActive(true);
         restartBtn.gameObject.SetActive(false);
         backBtn.gameObject.SetActive(false);
-        infoText.text = "Objective: \nRetrieve all the coins without dying. \n \nHow to move: \nW - Forward \nS - Backward \nA - Left \nD - Right \n \nPress Esc to toggle Menu.";
+        
 
         // Listener for Start game button
         startGameBtn.onClick.AddListener(TaskOnClick);
@@ -72,7 +72,9 @@ public class GameController : MonoBehaviour {
     }
     void TaskOnClick()
     {
+        infoText.text = "Objective: \nRetrieve all the coins without dying. \n \nHow to move: \nW - Forward \nS - Backward \nA - Left \nD - Right \n \nPress Esc to toggle Menu.";
         volumeSlider.gameObject.SetActive(false);
+        volumeText.gameObject.SetActive(false);
         GameMenu(0);
     }
 
@@ -82,12 +84,12 @@ public class GameController : MonoBehaviour {
         if (alive == true)
         {
             // Winning action 
-            infoText.text = "Gongratulations Dear Winner! \n" + "You managed to defeat the evil skeleton in level 1. \n" + "Time: " + minuteCount + ":" + (int)secondsCount + "\tScore: " + score;
+            infoText.text = "Gongratulations Dear Winner! \n" + "You managed to defeat the evil skeleton in level 1. \n" + "Time: " + minuteCount + ":" + (int)secondsCount + "     " + "Score: " + score;
         }
         else
         {
             // Defeat action
-            infoText.text = "You died like an undead due to asphyxiation \n" + "Thank you for playing all aspects of our game! \n" + "Time: " + minuteCount + ":" + (int)secondsCount + "Score: " + score;
+            infoText.text = "You died like an undead due to asphyxiation \n" + "Thank you for playing all aspects of our game! \n" + "Time: " + minuteCount + ":" + (int)secondsCount + "     " + "Score: " + score;
         }
         GameMenu(3);
     }
